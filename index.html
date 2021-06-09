@@ -2,11 +2,13 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>GitHub</title>
+  <title>Sample GitHub Main-Page</title>
 
-  <meta name="author" content="HEROPY">
+  <meta name="author" content="JAMESAREUMING">
   <meta name="description" content="GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
 
   <!-- http://ogp.me/ -->
@@ -38,12 +40,38 @@
   <link rel="stylesheet" media="(max-width: 768px)" href="css/main_small.css">
 
   <script defer src="js/main.js"></script>
+  <!-- Google Map API : KEY (AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg) -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+  <script>
+    // Initialize Google Map.
+    function initMap() {
+
+      const myLatLng = {
+        lat: 37.782293,
+        lng: -122.391240
+      }
+
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        scrollwheel: false,
+        zoom: 18
+      })
+
+      const marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'GitHub'
+      })
+
+    }
+  </script>
 </head>
+
 <body>
 <div class="body__container">
 
   <!--HEADER-->
-  <header class="section">
+  <div class="section" id="header">
     <div class="inner clearfix">
 
       <div class="menu-group float--left">
@@ -80,10 +108,10 @@
       <div id="toggle-btn">Header Menu Toggle Button</div>
 
     </div>
-  </header>
+  </div>
 
   <!--VISUAL-->
-  <section class="section section--visual">
+  <div class="section section--visual" id="visual">
     <div class="inner">
 
       <div class="summary">
@@ -109,10 +137,10 @@
       </form>
 
     </div>
-  </section>
+  </div>
 
   <!--FEATURE-->
-  <section class="section section--feature">
+  <div class="section section--feature">
 
     <div class="summary">
       <h2 class="summary__title">Welcome home, developers</h2>
@@ -120,6 +148,7 @@
         you work on your own or with others.</p>
     </div>
 
+    <!-- YOUTUBE 동영상 첨부 -->
     <div class="video">
       <div class="video-ratio">
         <iframe width="520" height="293" src="https://www.youtube.com/embed/afvT1c1ii0c?showinfo=0&rel=0"
@@ -157,10 +186,10 @@
       </div>
     </div>
 
-  </section>
+  </div>
 
   <!--WHERE IS-->
-  <section class="section section--where-is">
+  <div class="section section--where-is">
     <div class="inner">
 
       <div class="summary">
@@ -172,10 +201,10 @@
       <div id="map"></div>
 
     </div>
-  </section>
+  </div>
 
   <!--PRICING CARD-->
-  <section class="section section--pricing">
+  <div class="section section--pricing">
     <div class="inner">
 
       <div class="card">
@@ -188,10 +217,10 @@
       </div>
 
     </div>
-  </section>
+  </div>
 
   <!--FOOTER-->
-  <footer class="section">
+  <div class="section" id="footer">
     <div class="inner clearfix">
 
       <ul class="site-links float--right">
@@ -213,6 +242,7 @@
       </ul>
 
       <a class="logo" href="#">
+        <!-- svg 이미지코드 입력 -->
         <svg version="1.1"
              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
              width="24"
@@ -225,32 +255,8 @@
       </a>
 
     </div>
-  </footer>
+  </div>
 
 </div>
-<script>
-  // Initialize Google Map.
-  function initMap() {
-
-    const myLatLng = {
-      lat: 37.782293,
-      lng: -122.391240
-    }
-
-    const map = new google.maps.Map(document.getElementById('map'), {
-      center: myLatLng,
-      scrollwheel: false,
-      zoom: 18
-    })
-
-    const marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'GitHub'
-    })
-
-  }
-</script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
 </body>
 </html>
