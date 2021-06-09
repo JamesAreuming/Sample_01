@@ -131,7 +131,7 @@ a {
   display: block;
   text-indent: -9999px; /* 대체 텍스트 */
 }
-#eader .logo a:hover {
+#header .logo a:hover {
   background: url("../img/logo_on.svg");
 }
 #header .main-menu {
