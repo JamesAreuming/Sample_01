@@ -31,23 +31,86 @@
 </style>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script>
+    var $section = null;
+    var moveCnt = null;
+    var moveIndex = 0;
+    var moveCntTop = 0;
+    var winH = 0;
+    var time = false;
+
     $(document).ready(function(){
-        $(".section").height($(window).height());
-    })
+       // $(".section").height($(window).height());
+        init();
+        initEvent();
+    });
+
+    var init = function(){
+        $section = $(".section");
+    };
+
+    var initEvent = function(){
+        $("html,body").scrollTop(0);
+        winResize();
+
+        $(window).resize(function(){
+           winResize();
+        });
+
+        $section.on("mousewheel", function(e){
+           if(time == false){ //time 변수가 false 일때만 휠 이벤트 실행
+               wheel(e);
+           }
+        });
+    };
+
+    var winResize = function(){
+        winH = $(window).height();
+        $section.height(winH);
+        $("html, body").scrollTop(moveIndex.scrollTop);
+    };
+
+    var wheel = function (e){
+        if(e.originalEvent.wheelDelta < 0){
+            if(moveIndex < 3){
+              moveIndex += 1;
+              moving(moveIndex);
+            };
+        }else{
+            if(moveIndex > 0){
+                moveIndex -= 1;
+                moving(moveIndex);
+            };
+        };
+    };
+
+    var moving = function(index) {
+      time = true;
+      moveCnt = $section.eq(index);
+      moveCntTop = moveCnt.offset().top;
+
+      $("html, body").stop().animate({
+         scrollTop : moveCntTop
+      }, 1000, function(){
+          time = false;
+      });
+    };
+
+
+    scroll();
 </script>
 <body>
     <div class="content">
         <div class="section" id="section-01">
-            모바일 청첩장 제작중!
+           1
         </div>
         <div class="section" id="section-02">
-            모바일 청첩장 제작중!
+            2
         </div>
         <div class="section" id="section-03">
-            모바일 청첩장 제작중!
+            3
         </div>
         <div class="section" id="section-04">
-            모바일 청첩장 제작중!
+            4
         </div>
     </div>
 </body>
