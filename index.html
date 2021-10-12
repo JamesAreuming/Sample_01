@@ -5,7 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>현재승 ♥ 정아름의 모바일 청첩장입니다.</title>
 </head>
-<body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .section{
+        width: 100%;
 
+        font-size: 20px;
+        color: #FFFFFF;
+    }
+    #section-01{
+        background-color: #cc6666;
+    }
+    #section-02{
+        background-color: #9966cc;
+    }
+    #section-03{
+        background-color: #6699cc;
+    }
+    #section-04{
+        background-color: #66cc99;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".section").height($(window).height());
+    })
+</script>
+<body>
+    <div class="content">
+        <div class="section" id="section-01">
+            모바일 청첩장 제작중!
+        </div>
+        <div class="section" id="section-02">
+            모바일 청첩장 제작중!
+        </div>
+        <div class="section" id="section-03">
+            모바일 청첩장 제작중!
+        </div>
+        <div class="section" id="section-04">
+            모바일 청첩장 제작중!
+        </div>
+    </div>
 </body>
 </html>
