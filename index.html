@@ -1,117 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>현재승 ♥ 정아름의 모바일 청첩장입니다.</title>
-</head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    .section{
-        width: 100%;
-
-        font-size: 20px;
-        color: #FFFFFF;
-    }
-    #section-01{
-        background-color: #cc6666;
-    }
-    #section-02{
-        background-color: #9966cc;
-    }
-    #section-03{
-        background-color: #6699cc;
-    }
-    #section-04{
-        background-color: #66cc99;
-    }
-</style>
+  <meta charset="UTF-8">
+  <!-- 뷰포트 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>현재승 ♥ 정아름의 모바일 청첩장입니다.</title>
+  <link rel="stylesheet"  href="css/weddingDay-style.css"/>
+<!-- jQuery 라이브러리 -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script>
+<!-- 폰트어썸 -->
+<script src="https://kit.fontawesome.com/6f2f0f2d95.js"></script>
+  <script>
     var $section = null;
-    var moveCnt = null;
-    var moveIndex = 0;
-    var moveCntTop = 0;
     var winH = 0;
-    var time = false;
 
     $(document).ready(function(){
-       // $(".section").height($(window).height());
-        init();
-        initEvent();
+      init();
+      initEvent();
+      $("#section-01 > .inner").animate({"opacity":"1"}, 3900);
+      $(".main-title > img").animate({"opacity":"1", "padding-top":"10px"}, 3800);
+      $(".main-img > img").animate({"opacity":"1", "margin-top":"-30%"}, 4000);
     });
 
     var init = function(){
-        $section = $(".section");
+      $section = $(".section");
     };
 
     var initEvent = function(){
-        $("html,body").scrollTop(0);
+      winResize();
+
+      $(window).resize(function(){
         winResize();
-
-        $(window).resize(function(){
-           winResize();
-        });
-
-        $section.on("mousewheel", function(e){
-           if(time == false){ //time 변수가 false 일때만 휠 이벤트 실행
-               wheel(e);
-           }
-        });
-    };
-
-    var winResize = function(){
-        winH = $(window).height();
-        $section.height(winH);
-        $("html, body").scrollTop(moveIndex.scrollTop);
-    };
-
-    var wheel = function (e){
-        if(e.originalEvent.wheelDelta < 0){
-            if(moveIndex < 3){
-              moveIndex += 1;
-              moving(moveIndex);
-            };
-        }else{
-            if(moveIndex > 0){
-                moveIndex -= 1;
-                moving(moveIndex);
-            };
-        };
-    };
-
-    var moving = function(index) {
-      time = true;
-      moveCnt = $section.eq(index);
-      moveCntTop = moveCnt.offset().top;
-
-      $("html, body").stop().animate({
-         scrollTop : moveCntTop
-      }, 1000, function(){
-          time = false;
       });
     };
 
-
-    scroll();
+    var winResize = function(){
+      winH = $(window).height();
+      $section.height(winH);
+    };
 </script>
+</head>
 <body>
-    <div class="content">
-        <div class="section" id="section-01">
-           1
+  <div class="wedding-page-container">
+    <!-- 표지 -->
+    <div class="section" id="section-01">
+      <div class="inner">
+        <div class="main-wrap">
+          <div class="main-title">
+            <img src="img/main-title.png">
+          </div>
+          <div class="main-img">
+            <img src="img/wedding-main.png">
+          </div>
         </div>
-        <div class="section" id="section-02">
-            2
+        <div class="main-point">
+<!--          <img src="img/man-name.png">-->
+<!--          <img src="img/woman-name.png">-->
         </div>
-        <div class="section" id="section-03">
-            3
-        </div>
-        <div class="section" id="section-04">
-            4
-        </div>
+      </div>
     </div>
+    <!-- 글 -->
+    <div class="section" id="section-02">
+      <div class="inner"></div>
+    </div>
+    <!-- 웨딩사진 -->
+    <div class="section" id="section-03">
+      <div class="inner"></div>
+    </div>
+    <!-- 연락처 -->
+    <div class="section" id="section-04">
+      <div class="inner"></div>
+    </div>
+    <!-- 오시는길 -->
+    <div class="section" id="section-05">
+      <div class="inner"></div>
+    </div>
+  </div>
+
 </body>
 </html>
