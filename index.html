@@ -18,9 +18,15 @@
     $(document).ready(function(){
       init();
       initEvent();
-      $("#section-01 > .inner").animate({"opacity":"1"}, 3900);
-      $(".main-title > img").animate({"opacity":"1", "padding-top":"10px"}, 3800);
-      $(".main-img > img").animate({"opacity":"1", "margin-top":"-30%"}, 4000);
+      $("#section-01 > .inner").animate({"opacity":"1"}, 800).queue(function () {
+        $(".main-title > img").animate({"opacity":"1", "padding-top":"10px"}, 3800);
+        $(".main-img > img").animate({"opacity":"1", "margin-top":"-20%"}, 4000).queue(function () {
+            $(".main-point > img").eq(0).animate({"opacity":"1", "margin-bottom":"0"}, 600).queue(function () {
+              $(".main-point > img").eq(1).animate({"opacity":"1", "margin-bottom":"0"}, 600);
+            })
+        });
+      });
+
     });
 
     var init = function(){
@@ -55,14 +61,16 @@
           </div>
         </div>
         <div class="main-point">
-<!--          <img src="img/man-name.png">-->
-<!--          <img src="img/woman-name.png">-->
+          <img src="img/man-name.png">
+          <img src="img/woman-name.png">
         </div>
       </div>
     </div>
     <!-- 글 -->
     <div class="section" id="section-02">
-      <div class="inner"></div>
+      <div class="inner">
+
+      </div>
     </div>
     <!-- 웨딩사진 -->
     <div class="section" id="section-03">
