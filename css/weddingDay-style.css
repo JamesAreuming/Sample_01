@@ -15,8 +15,13 @@
 a{
     text-decoration: none;
 }
-.section{
+.wedding-page-container{
     width: 100%;
+}
+.section{
+    min-width: 375px;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 #section-01{
