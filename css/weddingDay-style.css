@@ -351,7 +351,7 @@ a{
 .route-address > .address{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     line-height: 33px;
 }
 .route-address > .trans{
@@ -361,7 +361,7 @@ a{
     margin-bottom: 8px;
 }
 .route-address ul:not(:last-child){
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .route-address ul li{
     margin-bottom: 5px;
