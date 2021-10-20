@@ -214,9 +214,11 @@ div, span, a{
     margin: 40px 0 20px 0;
     font-weight: bold;
 }
+.parents-contact-number-box > div{
+    width: 50%;
+}
 .parents-contact-number-box > div > div{
     margin-bottom: 20px;
-    text-align: left;
 }
 .parents-contact-number-box > div:first-child{
     margin-right: 14px;
