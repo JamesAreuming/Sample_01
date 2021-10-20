@@ -274,10 +274,20 @@ div, span, a{
     width: 100%;
     height: 100%;
 }
+.photo-title{
+    padding-top: 140px;
+    text-align: center;
+}
+.photo-title > .far,
+.photo-title > span{
+    color: #7f5e41;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
 
 .wedding-photo-box{
     width: 100%;
-    padding: 150px 0 20px 0;
+    padding: 20px 0 20px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

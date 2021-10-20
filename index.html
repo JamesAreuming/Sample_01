@@ -30,6 +30,19 @@
                     })
                 });
             });
+
+            $(".wedding-photo-box div").on('touchstart',function () {
+               var tt = $(this).css("background-image"); //url("http://localhost:63342/workspace_web/weddingDay/img/sample/s01.jpeg")
+                $(this).css({"opacity":0.5});
+                $(".wedding-photo-main > div").css({"background":tt, "background-repeat":"no-repeat", "background-size":"cover", "background-position":"center", "opacity":"1"});
+
+
+            });
+
+            $(".wedding-photo-box div").on('touchend',function () {
+                $(this).css({"opacity":1});
+            });
+
             var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
             var options = { //지도를 생성할 때 필요한 기본 옵션
                 center: new kakao.maps.LatLng(35.85980377026215, 128.5959688111494), //지도의 중심좌표.
@@ -82,6 +95,7 @@
             function closeOverlay() {
                 overlay.setMap(null);
             }
+
         });
     </script>
     <style>
@@ -239,6 +253,10 @@
     <!-- 웨딩사진 -->
     <div class="section" id="section-03">
         <div class="inner">
+            <div class="photo-title">
+                <i class="far fa-hand-point-down"></i>
+                <span>눌러보세요</span>
+            </div>
             <div class="wedding-photo-box">
                 <div></div>
                 <div></div>
