@@ -221,10 +221,10 @@ div, span, a{
     margin-bottom: 20px;
 }
 .parents-contact-number-box > div:first-child{
-    margin-right: 14px;
+    /*margin-right: 14px;*/
 }
 .parents-contact-number-box > div:last-child{
-    margin-left: 14px;
+    /*margin-left: 14px;*/
 }
 .parents-contact-number-box > div > div > span{
     font-size: 16px;
