@@ -173,11 +173,11 @@ div, span, a{
     margin-right: 5px;
 }
 .contact-box > div > span{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 .contact-box > div .fa{
-    font-size: 30px;
+    font-size: 25px;
     color: #BD9C7B;
 }
 .contact-box > div > .fa .fa-phone{
@@ -216,6 +216,7 @@ div, span, a{
 }
 .parents-contact-number-box > div > div{
     margin-bottom: 20px;
+    text-align: left;
 }
 .parents-contact-number-box > div:first-child{
     margin-right: 24px;
@@ -224,7 +225,7 @@ div, span, a{
     margin-left: 24px;
 }
 .parents-contact-number-box > div > div > span{
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .parents-contact-number-box > div > div > a{
@@ -232,6 +233,7 @@ div, span, a{
 }
 .parents-contact-number-box > div > div > a .fa{
     color: #BD9C7B;
+    font-size: 26px;
 }
 
 .parents-contact-number-box > div > div >.a-phone:after{
