@@ -302,31 +302,31 @@ div, span, a{
     background-position: center;
 }
 .wedding-photo-box > div:first-child {
-    background-image: url("../img/sample/s01.jpeg");
+    background-image: url("../img/wedding-img/w1.JPG");
 }
 .wedding-photo-box > div:nth-child(2){
-    background-image: url("../img/sample/s12.jpeg");
+    background-image: url("../img/wedding-img/w4.JPG");
 }
 .wedding-photo-box > div:nth-child(3){
-    background-image: url("../img/sample/s03.jpeg");
+    background-image: url("../img/wedding-img/w5.JPG");
 }
 .wedding-photo-box > div:nth-child(4) {
-    background-image: url("../img/sample/s04.jpeg");
+    background-image: url("../img/wedding-img/w7.JPG");
 }
 .wedding-photo-box > div:nth-child(5) {
-    background-image: url("../img/sample/s05.jpeg");
+    background-image: url("../img/wedding-img/w2.JPG");
 }
 .wedding-photo-box > div:nth-child(6) {
-    background-image: url("../img/sample/s06.jpeg");
+    background-image: url("../img/wedding-img/w9.JPG");
 }
 .wedding-photo-box > div:nth-child(7) {
-    background-image: url("../img/sample/s07.jpeg");
+    background-image: url("../img/wedding-img/w6.JPG");
 }
 .wedding-photo-box > div:nth-child(8) {
-    background-image: url("../img/sample/s08.jpeg");
+    background-image: url("../img/wedding-img/w8.JPG");
 }
 .wedding-photo-box > div:nth-child(9) {
-    background-image: url("../img/sample/s09.jpeg");
+    background-image: url("../img/wedding-img/w10.JPG");
 }
 .wedding-photo-main{
     width: 100%;
@@ -336,7 +336,7 @@ div, span, a{
     width: 90%;
     height: 500px;
     margin: 0 auto;
-    background-image: url("../img/sample/s07.jpeg");
+    background-image: url("../img/wedding-img/w3.JPG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
